@@ -1,0 +1,24 @@
+5.取得函数最多传递的参数 直接调用arguments.length
+复制代码
+       var fun1 = function (p1, p2, p3) {
+            alert('接收的参数长度为:' + arguments.length);
+            //遍历传入的参数
+            for (var i in arguments) {
+                //使用索引的方式获取参数值
+                console.log(arguments[i]); 
+            }
+        }
+        alert('fun1的参数长度为：'+fun1.length);
+        fun1('a', 2, 'c');
+复制代码
+ 
+
+6.实现 repeatStr
+复制代码
+function strrepeat(str,num){
+     
+    return  new Array(num + 1).join(str);
+
+}
+
+strrepeat("hello",3)
