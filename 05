@@ -1,0 +1,29 @@
+9.对象变成数组
+
+var data={a:1,b:2,c:3};
+function toArr(obj){
+           var arr1=[];
+           for(var i in obj){
+               arr1.push(obj[i]);
+           }
+           return arr1;
+           // arr1.fitter(function(x){console.log(arr1(x))});
+}
+console.log(toArr(data));
+
+10.将url的查询参数解析成字典对象
+
+function getQueryObject(url) {
+    url = url == null ? window.location.href : url;
+    var search = url.substring(url.lastIndexOf("?") + 1);
+    var obj = {};
+    var reg = /([^?&=]+)=([^?&=]*)/g;
+    search.replace(reg, function (rs, $1, $2) {
+        var name = decodeURIComponent($1);
+        var val = decodeURIComponent($2);                
+        val = String(val);
+        obj[name] = val;
+        return rs;
+    });
+    return obj;
+}
