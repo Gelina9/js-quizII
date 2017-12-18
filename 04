@@ -1,0 +1,16 @@
+7.写一个function，清除字符串前后的空格。（兼容所有浏览器）
+
+function trim(str) {
+    if (str & typeof str === "string") {
+        return str.replace(/(^s*)|(s*)$/g,""); //去除前后空白符
+    }
+}
+ 
+
+8.降维数组
+
+var arr=[[1,2],[3,4]];
+function Jw(obj){
+     return Array.prototype.concat.apply([],obj);
+}
+Jw(arr);
